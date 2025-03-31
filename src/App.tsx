@@ -1,5 +1,5 @@
 import './App.css';
-import AudioControls from './components/AudioControls';
+import AudioControls from './components/AudioControlPanel/AudioControls';
 
 function App() {
   return (

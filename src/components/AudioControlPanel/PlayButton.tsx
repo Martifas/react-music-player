@@ -1,6 +1,6 @@
-import PlayIcon from '../assets/PlayIcon';
-import PauseIcon from '../assets/PauseIcon';
-import { audioController } from '../audioController';
+import PlayIcon from '../../assets/PlayIcon';
+import PauseIcon from '../../assets/PauseIcon';
+import { audioController } from '../../audioController';
 import { useState } from 'react';
 
 function PlayButton() {

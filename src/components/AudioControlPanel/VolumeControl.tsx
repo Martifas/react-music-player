@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { audioController } from '../audioController';
+import { audioController } from '../../audioController';
 
 function VolumeControl() {
   const [volume, setVolume] = useState(1);

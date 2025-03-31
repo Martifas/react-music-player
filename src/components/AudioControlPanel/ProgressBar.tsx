@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { audioController } from '../audioController';
+import { audioController } from '../../audioController';
 
 function ProgressBar() {
   const [progress, setProgress] = useState(0);
