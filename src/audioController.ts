@@ -6,6 +6,7 @@ let gainNode: GainNode | null = null;
 const setupAudio = () => {
   if (!audioCtx) {
     audioCtx = new (window.AudioContext ||
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (window as any).webkitAudioContext)();
     audioElement = new Audio('/music/funk-1.mp3');
     audioElement.crossOrigin = 'anonymous';
