@@ -1,5 +1,5 @@
-import PreviousIcon from '../assets/PreviousIcon.svg';
-import NextIcon from '../assets/NextIcon.svg';
+import PreviousIcon from '../assets/PreviousIcon';
+import NextIcon from '../assets/NextIcon';
 import { ReactNode } from 'react';
 
 type SkipButtonsProps = {
@@ -9,21 +9,25 @@ type SkipButtonsProps = {
 function SkipButtons({ children }: SkipButtonsProps) {
   return (
     <>
-      <button className="w-10 h-10">
-        <img
-          src={PreviousIcon}
-          alt="Previous"
-          className="w-full h-full cursor-pointer"
-        />
-      </button>
+      <div className="relative group w-10 h-10 mr-3">
+        <button className="w-full h-full text-white flex justify-center items-center">
+          <PreviousIcon />
+        </button>
+        <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+          Previous
+        </span>
+      </div>
+
       {children}
-      <button className="w-10 h-10">
-        <img
-          src={NextIcon}
-          alt="Next"
-          className="w-full h-full cursor-pointer"
-        />
-      </button>
+
+      <div className="relative group w-10 h-10 ml-3">
+        <button className="w-full h-full text-white flex justify-center items-center">
+          <NextIcon />
+        </button>
+        <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+          Next
+        </span>
+      </div>
     </>
   );
 }
