@@ -38,4 +38,6 @@ export const audioController = {
   setVolume: (value: number) => {
     if (gainNode) gainNode.gain.value = value;
   },
+
+  getAudioElement: () => audioElement,
 };
