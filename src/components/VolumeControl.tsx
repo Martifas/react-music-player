@@ -17,7 +17,7 @@ function VolumeControl() {
       step="0.01"
       value={volume}
       onChange={handleChange}
-      className="cursor-pointer"
+      className="cursor-pointer w-24 sm:w-32"
     />
   );
 }

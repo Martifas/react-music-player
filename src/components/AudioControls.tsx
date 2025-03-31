@@ -5,13 +5,22 @@ import VolumeControl from './VolumeControl';
 function AudioControls() {
   return (
     <>
-      <div className="flex justify-center w-screen bg-[#0F172A]">
-        <div className="flex items-center gap-3 m-3">
+      <div className="flex w-screen bg-[#0F172A] items-center">
+        <div className="flex-1 text-white px-4">
+          <div className="pl-5 sm:pl-10 text-nowrap">Now Playing</div>
+        </div>
+
+        <div className="flex justify-center items-center py-3 flex-1">
           <SkipButtons>
             <PlayButton />
           </SkipButtons>
         </div>
-        <VolumeControl />
+
+        <div className="flex-1 flex justify-end">
+          <div className="pr-5 sm:pr-10 flex item-center">
+            <VolumeControl />
+          </div>
+        </div>
       </div>
     </>
   );
