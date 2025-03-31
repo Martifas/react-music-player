@@ -2,7 +2,7 @@ const PreviousIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 92 92"
-    className="w-10 h-10 text-white"
+    className="w-10 h-10 text-gray-300 hover:text-white transform transition-transform duration-200"
     fill="currentColor"
   >
     <path

@@ -2,7 +2,7 @@ const PauseIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 92 92"
-    className="w-9 h-9 text-black"
+    className="w-9 h-9 text-black mx-auto my-auto"
     fill="currentColor"
   >
     <path
