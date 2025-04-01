@@ -6,7 +6,7 @@ let audioElement: HTMLAudioElement | null = null;
 let track: MediaElementAudioSourceNode | null = null;
 let gainNode: GainNode | null = null;
 
-const loadTrack = (index: number) => {
+const internalLoadTrack = (index: number) => {
   if (!audioElement) return;
 
   const trackData = trackList[index];
@@ -62,14 +62,14 @@ export const audioController = {
   next: () => {
     const currentIndex = useAudioStore.getState().currentTrackIndex;
     const nextIndex = (currentIndex + 1) % trackList.length;
-    loadTrack(nextIndex);
+    internalLoadTrack(nextIndex);
     audioController.play();
   },
 
   previous: () => {
     const currentIndex = useAudioStore.getState().currentTrackIndex;
     const prevIndex = (currentIndex - 1 + trackList.length) % trackList.length;
-    loadTrack(prevIndex);
+    internalLoadTrack(prevIndex);
     audioController.play();
   },
 
@@ -78,4 +78,9 @@ export const audioController = {
   },
 
   getAudioElement: () => audioElement,
+
+  loadAndPlay: (index: number) => {
+    internalLoadTrack(index);
+    audioController.play();
+  },
 };

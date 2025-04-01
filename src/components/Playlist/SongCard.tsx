@@ -1,5 +1,4 @@
 import { audioController } from '../../audioController';
-import { useAudioStore } from '../../store';
 
 type SongCardProps = {
   position: number;
@@ -16,14 +15,10 @@ function formatDuration(seconds: number) {
 }
 
 function SongCard({ position, title, artist, album, duration }: SongCardProps) {
-  const setCurrentTrackIndex = useAudioStore(
-    (state) => state.setCurrentTrackIndex
-  );
-
   const handleClick = () => {
-    setCurrentTrackIndex(position - 1);
-    audioController.play();
+    audioController.loadAndPlay(position - 1);
   };
+
   return (
     <div
       onClick={handleClick}
