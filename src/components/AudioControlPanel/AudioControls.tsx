@@ -13,8 +13,13 @@ function AudioControls() {
       <div className="flex flex-col bg-[#0F172A]">
         <div className="flex w-screen  items-center">
           <div className="flex-1 text-white px-4">
-            <div className="pl-5 sm:pl-10 text-nowrap">
-              {trackList[index].title}
+            <div className="flex flex-col pl-5 sm:pl-10 text-nowrap">
+              <div className="font-medium text-white">
+                {trackList[index].title}
+              </div>
+              <div className="text-sm text-gray-300">
+                {trackList[index].artist}
+              </div>
             </div>
           </div>
 

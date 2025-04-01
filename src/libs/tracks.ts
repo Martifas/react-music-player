@@ -23,4 +23,28 @@ export const trackList = [
     duration: 121,
     src: '/music/funk-3.mp3',
   },
+  {
+    id: 4,
+    title: 'Morning Garden',
+    artist: 'Folk Acoustic',
+    album: 'Chilly Breezy',
+    duration: 233,
+    src: '/music/chill-1.mp3',
+  },
+  {
+    id: 5,
+    title: 'Lost in Dreams',
+    artist: 'Kulakovka',
+    album: 'Chilly Breezy',
+    duration: 195,
+    src: '/music/chill-2.mp3',
+  },
+  {
+    id: 6,
+    title: 'Good Night',
+    artist: 'FASSounds',
+    album: 'Chilly Breezy',
+    duration: 147,
+    src: '/music/chill-3.mp3',
+  },
 ];
