@@ -1,4 +1,7 @@
 import { trackList } from './libs/tracks';
+import { useAudioStore } from '../src/store';
+
+const { setPlaying } = useAudioStore.getState();
 
 let audioCtx: AudioContext | null = null;
 let audioElement: HTMLAudioElement | null = null;
@@ -45,18 +48,14 @@ export const audioController = {
       audioCtx.resume();
     }
     audioElement.play();
+    setPlaying(true);
   },
 
   pause: () => {
     if (!audioElement) return;
     audioElement.pause();
+    setPlaying(false);
   },
-
-  setVolume: (value: number) => {
-    if (gainNode) gainNode.gain.value = value;
-  },
-
-  getAudioElement: () => audioElement,
 
   next: () => {
     currentTrackIndex = (currentTrackIndex + 1) % trackList.length;
@@ -70,4 +69,10 @@ export const audioController = {
     loadTrack(currentTrackIndex);
     audioController.play();
   },
+
+  setVolume: (value: number) => {
+    if (gainNode) gainNode.gain.value = value;
+  },
+
+  getAudioElement: () => audioElement,
 };
