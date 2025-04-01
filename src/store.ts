@@ -1,11 +1,15 @@
 import { create } from 'zustand';
 
-type AudioStore = {
+type AudioState = {
+  currentTrackIndex: number;
   playing: boolean;
-  setPlaying: (value: boolean) => void;
+  setCurrentTrackIndex: (index: number) => void;
+  setPlaying: (state: boolean) => void;
 };
 
-export const useAudioStore = create<AudioStore>((set) => ({
+export const useAudioStore = create<AudioState>((set) => ({
+  currentTrackIndex: 0,
   playing: false,
-  setPlaying: (value) => set({ playing: value }),
+  setCurrentTrackIndex: (index) => set({ currentTrackIndex: index }),
+  setPlaying: (state) => set({ playing: state }),
 }));

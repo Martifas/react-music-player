@@ -1,3 +1,6 @@
+import { audioController } from '../../audioController';
+import { useAudioStore } from '../../store';
+
 type SongCardProps = {
   position: number;
   title: string;
@@ -13,8 +16,19 @@ function formatDuration(seconds: number) {
 }
 
 function SongCard({ position, title, artist, album, duration }: SongCardProps) {
+  const setCurrentTrackIndex = useAudioStore(
+    (state) => state.setCurrentTrackIndex
+  );
+
+  const handleClick = () => {
+    setCurrentTrackIndex(position - 1);
+    audioController.play();
+  };
   return (
-    <div className="grid grid-cols-12 items-center py-2 px-2 border-1 border-blue-300 rounded bg-white/70 hover:bg-white/90 transition">
+    <div
+      onClick={handleClick}
+      className="grid cursor-pointer grid-cols-12 items-center py-2 px-2 border-1 border-blue-300 rounded bg-white/70 hover:bg-white/90 transition"
+    >
       <div className="col-span-1 text-gray-700">{position}</div>
       <div className="col-span-6">
         <div className="font-medium text-black">{title}</div>
