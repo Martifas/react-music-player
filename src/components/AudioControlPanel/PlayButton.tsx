@@ -1,4 +1,4 @@
-import { useAudioStore } from '../../store';
+import { useAudioStore } from '../../states/audioState';
 import PlayIcon from '../../assets/PlayIcon';
 import PauseIcon from '../../assets/PauseIcon';
 import { audioController } from '../../audioController';

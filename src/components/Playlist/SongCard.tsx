@@ -1,6 +1,9 @@
 import { audioController } from '../../audioController';
+import FavoriteButton from '../FavoriteButton/FavoriteButton';
+import BlueHollowHeartIcon from '../../assets/BlueHollowHeartIcon';
 
 type SongCardProps = {
+  id: number;
   position: number;
   title: string;
   artist: string;
@@ -14,7 +17,14 @@ function formatDuration(seconds: number) {
   return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
-function SongCard({ position, title, artist, album, duration }: SongCardProps) {
+function SongCard({
+  position,
+  title,
+  artist,
+  album,
+  duration,
+  id,
+}: SongCardProps) {
   const handleClick = () => {
     audioController.loadAndPlay(position - 1);
   };
@@ -30,7 +40,8 @@ function SongCard({ position, title, artist, album, duration }: SongCardProps) {
         <div className="text-sm text-gray-600">{artist}</div>
       </div>
       <div className="flex-3 text-gray-700">{album}</div>
-      <div className="flex-2 text-right text-gray-700">
+      <div className="flex-2 flex items-center gap-0 text-right text-gray-700">
+        <FavoriteButton id={id} NotFavoriteIcon={BlueHollowHeartIcon} />
         {formatDuration(duration)}
       </div>
     </div>

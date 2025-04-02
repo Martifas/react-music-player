@@ -2,7 +2,7 @@ const FullHeartIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 511.626 511.626"
-    className="w-6 h-6 text-red-500 hover:text-white transform transition-transform duration-200"
+    className="w-6 h-6 text-red-500 hover:scale-110 transform transition-transform duration-200"
     fill="currentColor"
   >
     <path

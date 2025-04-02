@@ -1,4 +1,4 @@
-import { trackList } from '../../libs/tracks';
+import { trackList } from '../../lib/tracks';
 import SongCard from './SongCard';
 
 function Playlist() {
@@ -13,6 +13,7 @@ function Playlist() {
       {trackList.map((song, index) => (
         <SongCard
           key={song.id}
+          id={song.id}
           position={index + 1}
           title={song.title}
           artist={song.artist}

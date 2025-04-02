@@ -1,5 +1,5 @@
-import { trackList } from './libs/tracks';
-import { useAudioStore } from '../src/store';
+import { trackList } from './lib/tracks';
+import { useAudioStore } from './states/audioState';
 
 let audioCtx: AudioContext | null = null;
 let audioElement: HTMLAudioElement | null = null;
