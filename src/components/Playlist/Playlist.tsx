@@ -36,7 +36,8 @@ function Playlist() {
       </div>
 
       <div className="flex font-semibold text-gray-700 border-b border-gray-300 px-1 pb-2 mb-2">
-        <span className="flex-1">#</span>
+        <span className="flex-1 max-w-20">#</span>
+        <span className="flex-2 max-w-32 "></span>
         <span className="flex-6">Title</span>
         <span className="flex-3">Album</span>
         <span className="flex-2 text-right sm:text-left">Duration</span>
@@ -51,6 +52,7 @@ function Playlist() {
           artist={song.artist}
           album={song.album}
           duration={song.duration}
+          picture={song.image}
         />
       ))}
     </div>
