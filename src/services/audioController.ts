@@ -1,5 +1,5 @@
-import { useAudioStore } from '../states/audioState';
-import { useTrackStore } from '../states/useTrackState';
+import { useAudioStore } from '../stores/audioStore';
+import { useTrackStore } from '../stores/trackStore';
 
 let audioCtx: AudioContext | null = null;
 let audioElement: HTMLAudioElement | null = null;
@@ -75,9 +75,10 @@ export const audioController = {
   },
 
   getAudioElement: () => audioElement,
-  loadAndPlay: (index: number) => {
+  loadAndPlayById: (id: number) => {
     const tryPlay = () => {
       const tracks = useTrackStore.getState().tracks;
+      const index = tracks.findIndex((t) => t.id === id);
       const track = tracks[index];
 
       if (!track) {

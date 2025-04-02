@@ -1,44 +1,11 @@
-import { useEffect, useState } from 'react';
-import { audioController } from '../../services/audioController';
+import { useAudioProgress } from '../../hooks/useAudioProgress';
 
 function ProgressBar() {
-  useEffect(() => {
-    let interval: number;
-
-    const checkAndStart = () => {
-      const audio = audioController.getAudioElement();
-      if (!audio) {
-        // Check again shortly if audio isn't ready
-        setTimeout(checkAndStart, 200);
-        return;
-      }
-
-      const update = () => {
-        setCurrentTime(audio.currentTime);
-        setDuration(audio.duration || 0);
-        setProgress((audio.currentTime / audio.duration) * 100 || 0);
-      };
-
-      interval = window.setInterval(update, 500);
-    };
-
-    checkAndStart();
-
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, []);
-
-  const [progress, setProgress] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0);
+  const { progress, currentTime, duration, seek } = useAudioProgress();
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const audio = audioController.getAudioElement();
-    if (!audio || !duration) return;
-
     const value = Number(e.target.value);
-    audio.currentTime = (value / 100) * duration;
+    seek(value);
   };
 
   return (

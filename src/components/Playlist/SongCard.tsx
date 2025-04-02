@@ -1,7 +1,7 @@
 import { audioController } from '../../services/audioController';
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
 import BlueHollowHeartIcon from '../../assets/BlueHollowHeartIcon';
-import { useFavoriteStore } from '../../states/favoriteState';
+import { useFavoriteStore } from '../../stores/favoriteStore';
 
 type SongCardProps = {
   id: number;
@@ -31,11 +31,13 @@ function SongCard({
   const isFavorite = useFavoriteStore((state) => state.isFavorite(id));
 
   const handleClick = () => {
-    audioController.loadAndPlay(position - 1);
+    audioController.loadAndPlayById(id);
   };
 
   return (
     <div
+      aria-label={`Play ${title} by ${artist}`}
+      role="button"
       onClick={handleClick}
       className="group flex cursor-pointer items-center py-2 px-2 border-1 border-blue-300 rounded bg-white/70 hover:bg-blue-100 hover:shadow-md transition"
     >

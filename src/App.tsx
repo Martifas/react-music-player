@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import './App.css';
 import AudioControls from './components/AudioControlPanel/AudioControls';
-import Playlist from './components/Playlist/Playlist';
-import { useTrackStore } from './states/useTrackState';
+import { useTrackStore } from './stores/trackStore';
+import PlaylistContainer from './components/Playlist/PlaylistContainer';
 
 function App() {
   const fetchTracks = useTrackStore((state) => state.fetchTracks);
@@ -18,7 +18,7 @@ function App() {
     <>
       <div className="w-screen h-screen flex flex-col">
         <div className="flex-1 overflow-y-auto overflow-x-hidden">
-          <Playlist />
+          <PlaylistContainer />
         </div>
         <div className="flex-none">
           <AudioControls />

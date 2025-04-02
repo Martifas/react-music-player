@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-type Track = {
+export type Track = {
   id: number;
   title: string;
   artist: string;

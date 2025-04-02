@@ -3,9 +3,9 @@ import ProgressBar from './ProgressBar';
 import SkipButtons from './SkipButtons';
 import VolumeControl from './VolumeControl';
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
-import { useAudioStore } from '../../states/audioState';
+import { useAudioStore } from '../../stores/audioStore';
 import HollowHeartIcon from '../../assets/HollowHeartIcon';
-import { useTrackStore } from '../../states/useTrackState';
+import { useTrackStore } from '../../stores/trackStore';
 
 function AudioControls() {
   const index = useAudioStore((state) => state.currentTrackIndex);
