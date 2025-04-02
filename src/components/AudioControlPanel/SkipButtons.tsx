@@ -10,7 +10,7 @@ type SkipButtonsProps = {
 function SkipButtons({ children }: SkipButtonsProps) {
   return (
     <>
-      <div className="relative group w-10 h-10 mr-3">
+      <div className="relative group w-7 h-7 mr-3">
         <button
           className="w-full h-full cursor-pointer flex border-1 border-gray-300 rounded-full justify-center items-center"
           onClick={() => audioController.previous()}
@@ -24,7 +24,7 @@ function SkipButtons({ children }: SkipButtonsProps) {
 
       {children}
 
-      <div className="relative group w-10 h-10 ml-3">
+      <div className="relative group w-7 h-7 ml-3">
         <button
           className="w-full h-full cursor-pointer text-white border-1 border-gray-300 rounded-full flex justify-center items-center"
           onClick={() => audioController.next()}

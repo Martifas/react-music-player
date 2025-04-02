@@ -17,7 +17,7 @@ function PlayButton() {
   return (
     <div className="relative group">
       <button
-        className="w-12 h-12 cursor-pointer flex justify-center items-center bg-blue-500 rounded-full hover:bg-blue-700 transform transition-transform duration-200 hover:scale-110"
+        className="w-10 h-10 cursor-pointer flex justify-center items-center bg-blue-500 rounded-full hover:bg-blue-700 transform transition-transform duration-200 hover:scale-110"
         onClick={togglePlay}
       >
         {playing ? <PauseIcon /> : <PlayIcon />}
