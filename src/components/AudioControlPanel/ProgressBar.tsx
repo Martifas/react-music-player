@@ -1,29 +1,37 @@
-import { useEffect, useRef, useState } from 'react';
-import { audioController } from '../../audioController';
+import { useEffect, useState } from 'react';
+import { audioController } from '../../services/audioController';
 
 function ProgressBar() {
+  useEffect(() => {
+    let interval: number;
+
+    const checkAndStart = () => {
+      const audio = audioController.getAudioElement();
+      if (!audio) {
+        // Check again shortly if audio isn't ready
+        setTimeout(checkAndStart, 200);
+        return;
+      }
+
+      const update = () => {
+        setCurrentTime(audio.currentTime);
+        setDuration(audio.duration || 0);
+        setProgress((audio.currentTime / audio.duration) * 100 || 0);
+      };
+
+      interval = window.setInterval(update, 500);
+    };
+
+    checkAndStart();
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, []);
+
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-
-  const intervalRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    const audio = audioController.getAudioElement();
-    if (!audio) return;
-
-    const update = () => {
-      setCurrentTime(audio.currentTime);
-      setDuration(audio.duration || 0);
-      setProgress((audio.currentTime / audio.duration) * 100 || 0);
-    };
-
-    intervalRef.current = window.setInterval(update, 500);
-
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, []);
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
     const audio = audioController.getAudioElement();

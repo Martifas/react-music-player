@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { trackList } from '../../lib/tracks';
 import { useFavoriteStore } from '../../states/favoriteState';
 import SongCard from './SongCard';
+import { useTrackStore } from '../../states/useTrackState';
 
 function Playlist() {
+  const trackList = useTrackStore((state) => state.tracks);
   const [selectedPlaylist, setSelectedPlaylist] = useState<'all' | 'favorites'>(
     'all'
   );
@@ -19,8 +20,8 @@ function Playlist() {
       : trackList;
 
   return (
-    <div className="h-full w-full bg-gradient-to-b from-blue-100 to-blue-200 py-4 px-1">
-      <div className="flex gap-3 py-3">
+    <div className="w-full bg-gradient-to-b from-blue-100 to-blue-200 py-4 px-1 min-h-screen">
+      <div className="flex gap-3 py-3 sticky top-0 bg-blue-100">
         <button
           className={`rounded-full p-2 ${selectedPlaylist === 'all' ? 'bg-blue-400 hover:bg-blue-300' : 'bg-blue-200 hover:bg-blue-100'}`}
           onClick={() => handlePlaylistChange('all')}
@@ -43,18 +44,22 @@ function Playlist() {
         <span className="flex-2 text-right sm:text-left">Duration</span>
       </div>
 
-      {filteredTracks.map((song, index) => (
-        <SongCard
-          key={song.id}
-          id={song.id}
-          position={index + 1}
-          title={song.title}
-          artist={song.artist}
-          album={song.album}
-          duration={song.duration}
-          picture={song.image}
-        />
-      ))}
+      {filteredTracks.map((song, index) => {
+        const originalIndex = trackList.findIndex((t) => t.id === song.id);
+
+        return (
+          <SongCard
+            key={song.id}
+            id={song.id}
+            position={originalIndex + 1}
+            title={song.title}
+            artist={song.artist}
+            album={song.album}
+            duration={song.duration}
+            picture={song.image}
+          />
+        );
+      })}
     </div>
   );
 }

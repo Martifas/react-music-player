@@ -1,7 +1,7 @@
 import PreviousIcon from '../../assets/PreviousIcon';
 import NextIcon from '../../assets/NextIcon';
 import { ReactNode } from 'react';
-import { audioController } from '../../audioController';
+import { audioController } from '../../services/audioController';
 
 type SkipButtonsProps = {
   children?: ReactNode;

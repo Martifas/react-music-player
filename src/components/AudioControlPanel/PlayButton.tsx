@@ -1,7 +1,7 @@
 import { useAudioStore } from '../../states/audioState';
 import PlayIcon from '../../assets/PlayIcon';
 import PauseIcon from '../../assets/PauseIcon';
-import { audioController } from '../../audioController';
+import { audioController } from '../../services/audioController';
 
 function PlayButton() {
   const playing = useAudioStore((state) => state.playing);
