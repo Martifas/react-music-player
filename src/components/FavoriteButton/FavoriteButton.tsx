@@ -16,7 +16,7 @@ function FavoriteButton({ id, NotFavoriteIcon }: FavoriteButtonProps) {
   };
 
   return (
-    <div className="w-10 h-10">
+    <div className="relative z-10 w-10 h-10 group/fav">
       <button
         type="button"
         className="w-full h-full cursor-pointer"
@@ -25,6 +25,9 @@ function FavoriteButton({ id, NotFavoriteIcon }: FavoriteButtonProps) {
       >
         {isFavorite ? <FullHeartIcon /> : <NotFavoriteIcon />}
       </button>
+      <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/fav:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+        {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
+      </span>
     </div>
   );
 }

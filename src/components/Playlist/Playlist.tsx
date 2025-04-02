@@ -8,7 +8,7 @@ function Playlist() {
         <span className="flex-1">#</span>
         <span className="flex-6">Title</span>
         <span className="flex-3">Album</span>
-        <span className="flex-2 text-right">Duration</span>
+        <span className="flex-2 text-right sm:text-left">Duration</span>
       </div>
       {trackList.map((song, index) => (
         <SongCard
