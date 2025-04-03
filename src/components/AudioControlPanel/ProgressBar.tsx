@@ -9,7 +9,7 @@ function ProgressBar() {
   };
 
   return (
-    <div className="w-full px-4">
+    <div className="w-full sm:max-w-screen-md mx-auto px-4">
       <input
         type="range"
         min="0"

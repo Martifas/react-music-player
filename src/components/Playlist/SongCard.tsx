@@ -41,7 +41,9 @@ function SongCard({
       onClick={handleClick}
       className="group flex cursor-pointer items-center py-2 px-2 border-1 border-blue-300 rounded bg-white/70 hover:bg-blue-100 hover:shadow-md transition"
     >
-      <div className="flex-1 text-gray-700 max-w-20">{position}</div>
+      <div className="flex-1 text-gray-700 text-center max-w-20">
+        {position}
+      </div>
 
       <div className="flex-2 h-16 mr-2 max-w-32">
         <img src={picture} className="w-full h-full object-cover rounded" />
@@ -54,7 +56,7 @@ function SongCard({
 
       <div className="flex-3 text-gray-700 mr-1">{album}</div>
 
-      <div className="flex-2 flex items-center justify-end gap-1 text-gray-700">
+      <div className="flex-2 flex items-center justify-center gap-1 text-gray-700">
         <div
           className={`${isFavorite ? 'visible' : 'invisible group-hover:visible'}`}
         >

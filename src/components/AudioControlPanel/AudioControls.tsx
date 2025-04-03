@@ -22,8 +22,8 @@ function AudioControls() {
   }
 
   return (
-    <div className="flex flex-col bg-[#0F172A]">
-      <div className="flex w-screen items-center px-4 py-3 overflow-visible relative">
+    <div className="flex sm flex-col bg-[#0F172A]">
+      <div className="flex w-screen sm:max-w-screen-md mx-auto items-center px-4 py-3 overflow-visible relative">
         <div className="relative z-0 flex flex-row items-center sm:justify-center gap-3 max-w-[140px] sm:max-w-none flex-1 overflow-visible">
           <div className="flex flex-col overflow-hidden text-nowrap group">
             <div className="font-medium sm:text-lg text-white truncate">
@@ -53,9 +53,7 @@ function AudioControls() {
         </div>
       </div>
 
-      <div>
-        <ProgressBar />
-      </div>
+      <ProgressBar />
     </div>
   );
 }

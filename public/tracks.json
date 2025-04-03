@@ -1,111 +1,110 @@
 [
-    {
-      "id": 1,
-      "title": "Funk One",
-      "artist": "Cool Band",
-      "album": "Funkyness",
-      "duration": 118,
-      "image": "/images/funk-1.jpg",
-      "src": "/music/funk-1.mp3"
-    },
-    {
-      "id": 2,
-      "title": "Happy",
-      "artist": "DELO Sound",
-      "album": "Funkyness",
-      "duration": 105,
-      "image": "/images/funk-2.jpg",
-      "src": "/music/funk-2.mp3"
-    },
-    {
-      "id": 3,
-      "title": "Space Jam",
-      "artist": "Alien Funk",
-      "album": "Funkyness",
-      "duration": 121,
-      "image": "/images/funk-3.jpg",
-      "src": "/music/funk-3.mp3"
-    },
-    {
-      "id": 4,
-      "title": "Morning Garden",
-      "artist": "Folk Acoustic",
-      "album": "Chilly Breezy",
-      "duration": 233,
-      "image": "/images/chill-1.jpg",
-      "src": "/music/chill-1.mp3"
-    },
-    {
-      "id": 5,
-      "title": "Lost in Dreams",
-      "artist": "Kulakovka",
-      "album": "Chilly Breezy",
-      "duration": 195,
-      "image": "/images/chill-2.jpg",
-      "src": "/music/chill-2.mp3"
-    },
-    {
-      "id": 6,
-      "title": "Good Night",
-      "artist": "FASSounds",
-      "album": "Chilly Breezy",
-      "duration": 147,
-      "image": "/images/chill-3.jpg",
-      "src": "/music/chill-3.mp3"
-    },
-    {
-      "id": 7,
-      "title": "The Best Jazz Club in New Orleans",
-      "artist": "Paolo Argento",
-      "album": "Cool Cat",
-      "duration": 120,
-      "image": "/images/jazz-1.jpg",
-      "src": "/music/jazz-1.mp3"
-    },
-    {
-      "id": 8,
-      "title": "Jazz at Dizzy's",
-      "artist": "Tokyo Rifft",
-      "album": "Cool Cat",
-      "duration": 294,
-      "image": "/images/jazz-2.jpg",
-      "src": "/music/jazz-2.mp3"
-    },
-    {
-      "id": 9,
-      "title": "Piano Jazz",
-      "artist": "Lite Saturation",
-      "album": "Cool Cat",
-      "duration": 248,
-      "image": "/images/jazz-3.jpg",
-      "src": "/music/jazz-3.mp3"
-    },
-    {
-      "id": 10,
-      "title": "Stomping Rock (Four Shots)",
-      "artist": "Alex Grohl",
-      "album": "Rock Age",
-      "duration": 119,
-      "image": "/images/rock-1.jpg",
-      "src": "/music/rock-1.mp3"
-    },
-    {
-      "id": 11,
-      "title": "Epic Rock",
-      "artist": "Soulful Jam Tracks",
-      "album": "Rock Age",
-      "duration": 131,
-      "image": "/images/rock-2.jpg",
-      "src": "/music/rock-2.mp3"
-    },
-    {
-      "id": 12,
-      "title": "Kansas",
-      "artist": "Nick Panek",
-      "album": "Rock Age",
-      "duration": 119,
-      "image": "/images/rock-3.jpg",
-      "src": "/music/rock-3.mp3"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Funk One",
+    "artist": "Cool Band",
+    "album": "Funkyness",
+    "duration": 118,
+    "image": "/images/funk-1.jpg",
+    "src": "/music/funk-1.mp3"
+  },
+  {
+    "id": 2,
+    "title": "Happy",
+    "artist": "DELO Sound",
+    "album": "Funkyness",
+    "duration": 105,
+    "image": "/images/funk-2.jpg",
+    "src": "/music/funk-2.mp3"
+  },
+  {
+    "id": 3,
+    "title": "Space Jam",
+    "artist": "Alien Funk",
+    "album": "Funkyness",
+    "duration": 121,
+    "image": "/images/funk-3.jpg",
+    "src": "/music/funk-3.mp3"
+  },
+  {
+    "id": 4,
+    "title": "Morning Garden",
+    "artist": "Folk Acoustic",
+    "album": "Chilly Breezy",
+    "duration": 233,
+    "image": "/images/chill-1.jpg",
+    "src": "/music/chill-1.mp3"
+  },
+  {
+    "id": 5,
+    "title": "Lost in Dreams",
+    "artist": "Kulakovka",
+    "album": "Chilly Breezy",
+    "duration": 195,
+    "image": "/images/chill-2.jpg",
+    "src": "/music/chill-2.mp3"
+  },
+  {
+    "id": 6,
+    "title": "Good Night",
+    "artist": "FASSounds",
+    "album": "Chilly Breezy",
+    "duration": 147,
+    "image": "/images/chill-3.jpg",
+    "src": "/music/chill-3.mp3"
+  },
+  {
+    "id": 7,
+    "title": "The Best Jazz Club in New Orleans",
+    "artist": "Paolo Argento",
+    "album": "Cool Cat",
+    "duration": 120,
+    "image": "/images/jazz-1.jpg",
+    "src": "/music/jazz-1.mp3"
+  },
+  {
+    "id": 8,
+    "title": "Jazz at Dizzy's",
+    "artist": "Tokyo Rifft",
+    "album": "Cool Cat",
+    "duration": 294,
+    "image": "/images/jazz-2.jpg",
+    "src": "/music/jazz-2.mp3"
+  },
+  {
+    "id": 9,
+    "title": "Piano Jazz",
+    "artist": "Lite Saturation",
+    "album": "Cool Cat",
+    "duration": 248,
+    "image": "/images/jazz-3.jpg",
+    "src": "/music/jazz-3.mp3"
+  },
+  {
+    "id": 10,
+    "title": "Stomping Rock (Four Shots)",
+    "artist": "Alex Grohl",
+    "album": "Rock Age",
+    "duration": 119,
+    "image": "/images/rock-1.jpg",
+    "src": "/music/rock-1.mp3"
+  },
+  {
+    "id": 11,
+    "title": "Epic Rock",
+    "artist": "Soulful Jam Tracks",
+    "album": "Rock Age",
+    "duration": 131,
+    "image": "/images/rock-2.jpg",
+    "src": "/music/rock-2.mp3"
+  },
+  {
+    "id": 12,
+    "title": "Kansas",
+    "artist": "Nick Panek",
+    "album": "Rock Age",
+    "duration": 119,
+    "image": "/images/rock-3.jpg",
+    "src": "/music/rock-3.mp3"
+  }
+]

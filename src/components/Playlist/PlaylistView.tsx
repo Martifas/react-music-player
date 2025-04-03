@@ -29,6 +29,13 @@ function PlaylistView({
           onClick={() => onSelectPlaylist('favorites')}
         />
       </div>
+      <div className="flex font-semibold text-gray-700 px-1 mt-3 pb-2 mb-2">
+        <span className="flex-1 max-w-20 text-center">#</span>
+        <span className="flex-2 max-w-32 "></span>
+        <span className="flex-6">Title</span>
+        <span className="flex-3">Album</span>
+        <span className="flex-2 text-right sm:text-center">Duration</span>
+      </div>
       {filteredTracks.length === 0 ? (
         <div className="text-gray-600 text-sm text-center py-10">
           {selectedPlaylist === 'favorites'

@@ -16,8 +16,8 @@ function App() {
   }, [fetchTracks]);
   return (
     <>
-      <div className="w-screen h-screen flex flex-col">
-        <div className="flex-1 overflow-y-auto overflow-x-hidden">
+      <div className="w-screen h-screen flex flex-col bg-blue-200">
+        <div className="flex-1 w-full bg-white border-1 border-blue-400 sm:max-w-screen-md mx-auto overflow-y-auto overflow-x-hidden">
           <PlaylistContainer />
         </div>
         <div className="flex-none">
