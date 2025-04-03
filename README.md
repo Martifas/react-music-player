@@ -1,9 +1,32 @@
-# 🎵 React Music Player
+# React Music Player
 
 A user-friendly music player interface built with **React**, **TypeScript**, **Vite**, and **Zustand**.  
 Users can browse a list of songs, favorite them, play/pause, skip tracks, control volume, and view current song details with a real-time progress bar.
 
 ---
+
+##  Installation
+
+After cloning the repository and installing dependencies with `npm install`, use the following commands:
+
+Development:
+
+```sh
+npm run dev
+```
+
+Build:
+
+```sh
+npm run build
+```
+
+And
+
+```sh
+npm run preview
+```
+
 
 ## Features
 
