@@ -28,3 +28,7 @@ Users can browse a list of songs, favorite them, play/pause, skip tracks, contro
 - **Immer** for clean immutable updates
 - **Web Audio API** + `<audio>` element for audio playback
 - **Tailwind CSS** for UI styling
+
+
+## Music Attribution
+- All music tracks used in this project are sourced from Pixabay Music, which provides royalty-free music for personal and commercial use.
