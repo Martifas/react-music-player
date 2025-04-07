@@ -44,14 +44,24 @@ const internalLoadTrack = (index: number) => {
 
 export const audioController = {
   play: () => {
-    if (!audioCtx || !audioElement) return;
+    const audioState = useAudioStore.getState();
+    const trackList = useTrackStore.getState().tracks;
 
-    if (audioCtx.state === 'suspended') {
+    if (!audioCtx || !audioElement) {
+      const indexToLoad = audioState.currentTrackIndex ?? 0;
+      if (trackList.length > 0) {
+        internalLoadTrack(indexToLoad);
+      } else {
+        return;
+      }
+    }
+
+    if (audioCtx?.state === 'suspended') {
       audioCtx.resume();
     }
 
-    audioElement.play();
-    useAudioStore.getState().setPlaying(true);
+    audioElement!.play();
+    audioState.setPlaying(true);
   },
 
   pause: () => {
