@@ -31,4 +31,4 @@ Users can browse a list of songs, favorite them, play/pause, skip tracks, contro
 
 
 ## Music Attribution
-- All music tracks used in this project are sourced from Pixabay Music, which provides royalty-free music for personal and commercial use.
+All music tracks used in this project are sourced from Pixabay Music, which provides royalty-free music for personal and commercial use.
