@@ -4,6 +4,8 @@ import { audioController } from '../../services/audioController';
 function VolumeControl() {
   const [volume, setVolume] = useState(1);
 
+  // dependancy for setVolume here
+
   useEffect(() => {
     const trySetVolume = () => {
       const audio = audioController.getAudioElement();

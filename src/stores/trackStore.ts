@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
 
 export type Track = {
   id: number;
@@ -17,20 +16,13 @@ type TrackState = {
   fetchTracks: () => Promise<void>;
 };
 
-export const useTrackStore = create<TrackState>()(
-  persist(
-    (set, get) => ({
-      tracks: [],
-      isLoaded: false,
-      fetchTracks: async () => {
-        if (get().isLoaded) return;
-        const res = await fetch('/tracks.json');
-        const data = await res.json();
-        set({ tracks: data, isLoaded: true });
-      },
-    }),
-    {
-      name: 'track-storage',
-    }
-  )
-);
+export const useTrackStore = create<TrackState>()((set, get) => ({
+  tracks: [],
+  isLoaded: false,
+  fetchTracks: async () => {
+    if (get().isLoaded) return;
+    const res = await fetch('/tracks.json');
+    const data = await res.json(); //zod validation for data
+    set({ tracks: data, isLoaded: true });
+  },
+}));

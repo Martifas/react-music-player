@@ -8,7 +8,7 @@ let gainNode: GainNode | null = null;
 
 const getTrackListAndIndex = () => {
   const trackList = useTrackStore.getState().tracks;
-  const currentIndex = useAudioStore.getState().currentTrackIndex;
+  const currentIndex = useAudioStore.getState().currentTrackIndex; //adjust logic
   return { trackList, currentIndex };
 };
 

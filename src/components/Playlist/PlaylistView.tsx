@@ -40,7 +40,8 @@ function PlaylistView({
         <div className="text-gray-600 text-sm text-center py-10">
           {selectedPlaylist === 'favorites'
             ? 'You haven’t added any favorite songs yet.'
-            : 'No songs available.'}
+            : 'No songs available.'}{' '}
+          // no nested terniary operators
         </div>
       ) : (
         filteredTracks.map((song) => {

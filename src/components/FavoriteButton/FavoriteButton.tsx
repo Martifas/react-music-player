@@ -3,10 +3,10 @@ import { useFavoriteStore } from '../../stores/favoriteStore';
 
 type FavoriteButtonProps = {
   id: number;
-  NotFavoriteIcon: React.ComponentType;
+  notFavoriteIcon: React.ComponentType;
 };
 
-function FavoriteButton({ id, NotFavoriteIcon }: FavoriteButtonProps) {
+function FavoriteButton({ id, notFavoriteIcon }: FavoriteButtonProps) {
   const isFavorite = useFavoriteStore((state) => state.isFavorite(id));
   const toggleFavorite = useFavoriteStore((state) => state.toggleFavorite);
 
@@ -22,7 +22,7 @@ function FavoriteButton({ id, NotFavoriteIcon }: FavoriteButtonProps) {
       onClick={handleClick}
       aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
     >
-      {isFavorite ? <FullHeartIcon /> : <NotFavoriteIcon />}
+      {isFavorite ? <FullHeartIcon /> : <notFavoriteIcon />}
 
       <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/fav:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
         {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
